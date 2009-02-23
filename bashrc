@@ -1,5 +1,3 @@
-source ~/.profile
-
 # command prompt
 export PS1='$LOGNAME:\w> '
 
@@ -21,3 +19,8 @@ alias popd='popd_update'
 alias rm="rm -i"
 alias mv="mv -i"
 alias cp="cp -i"
+
+# utility aliases
+alias ll="ls -l"
+alias la="ls -A"
+alias l="ls -CF"
