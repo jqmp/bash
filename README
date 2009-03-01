@@ -1,0 +1,13 @@
+This directory contains the bash settings that I want to be common to all
+my bash configurations.  Here is how to use it:
+
+You should have in your home directory:
+- a directory called bash
+- a file called .bashrc
+
+The directory should be this one (the one containing this README).
+
+The .bashrc file should contain the following line:
+source bash/bashrc
+
+That is all.
