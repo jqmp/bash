@@ -5,6 +5,9 @@ export PS1='$LOGNAME:\w> '
 update_title() { echo -n -e "\033]0;$PWD\007";}
 update_title
 
+# the current directory should be in our path
+export PATH=$PATH:.
+
 # we have to alias every directory-changing command to use update_title()
 cd_update() { cd $*; update_title;}
 alias cd='cd_update'
