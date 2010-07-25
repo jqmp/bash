@@ -13,7 +13,9 @@ fi
 
 # this is some magic that makes the terminal title reflect the cur. dir.
 update_title() { echo -n -e "\033]0;$PWD\007";}
-update_title
+if [ -z "$PS1" ]; then
+    update_title
+fi
 
 # the current directory should be in our path
 export PATH=$PATH:.
@@ -37,3 +39,7 @@ alias cp="cp -i"
 alias ll="ls -l"
 alias la="ls -A"
 alias l="ls -CF"
+
+# Use ctrl-p/ctrl-n to search back/forward.
+bind '"\C-p" history-search-backward'
+bind '"\C-n" history-search-forward'
