@@ -13,17 +13,18 @@ export PS1='$LOGNAME:\w> '
 #fi
 
 # this is some magic that makes the terminal title reflect the cur. dir.
-update_title() { echo -n -e "\033]0;$PWD\007";}
-if [ -z "$PS1" ]; then
-    update_title
-fi
+#update_title() { echo -n -e "\033]0;$PWD\007";}
+#if [ -z "$PS1" ]; then
+#    update_title
+#fi
 
 # the current directory should be in our path
 export PATH=$PATH:.
 
 # we have to alias every directory-changing command to use update_title()
+# FIXME commenting this out, because directories with spaces get messed up.
 cd_update() { cd $*; update_title;}
-alias cd='cd_update'
+#alias cd='cd_update'
 
 pushd_update() { pushd $*; update_title;}
 alias pushd='pushd_update'
