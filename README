@@ -10,4 +10,6 @@ The directory should be this one (the one containing this README).
 The .bashrc file should contain the following line:
 source bash/bashrc
 
+I have also included my screenrc file; there doesn't seem to be a better way to use it than to copy it to ~/.screenrc.
+
 That is all.

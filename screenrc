@@ -1,0 +1,4 @@
+shell -/bin/bash
+termcapinfo * ti@:te@
+startup_message off
+escape ^ja
